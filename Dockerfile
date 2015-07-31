@@ -40,11 +40,12 @@ RUN mkdir -p /home/jenkins/composerbin && chown -R jenkins:jenkins /home/jenkins
 		composer global require "phploc/phploc=*" --prefer-source --no-interaction; \
 		composer global require "pdepend/pdepend=*" --prefer-source --no-interaction; \
 		composer global require "phpmd/phpmd=*" --prefer-source --no-interaction; \
-		composer global require "sebastian/phpcpd=*" --prefer-source --no-interaction; \
+		composer global require "sebastian/phpcpd=*" --prefer-source --no-interaction;'; \
     ln -s /home/jenkins/composerbin/phing /usr/local/bin/; \
 	ln -s /home/jenkins/composerbin/pdepend /usr/local/bin/; \
 	ln -s /home/jenkins/composerbin/phpcpd /usr/local/bin/; \
 	ln -s /home/jenkins/composerbin/phpcs /usr/local/bin/; \
+	ln -s /home/jenkins/composerbin/phpdox /usr/local/bin/; \
 	ln -s /home/jenkins/composerbin/phploc /usr/local/bin/; \
 	ln -s /home/jenkins/composerbin/phpmd /usr/local/bin/; \
 	ln -s /home/jenkins/composerbin/phpunit /usr/local/bin/
